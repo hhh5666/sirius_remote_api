@@ -7,6 +7,8 @@ import os
 app = Flask(__name__)
 CORS(app)
 DATA_FILE = 'places.json'
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
 
 def load_places():
     if os.path.exists(DATA_FILE):
